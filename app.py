@@ -1,4 +1,4 @@
-iimport base64
+import base64
 import os
 import subprocess
 
@@ -29,12 +29,12 @@ def login():
     # Insecure cookie setting
     username = request.form.get('username')
     password = request.form.get('password')
-
+    
     if password == HARDCODED_PASSWORD:
         response = "Login successful"
         # Insecure cookie (no httpOnly, no secure flag)
         return response
-
+    
     return "Login failed"
 
 if __name__ == '__main__':
